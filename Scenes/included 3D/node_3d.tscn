@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://yt0eashjeni0"]
+
+[ext_resource type="PackedScene" uid="uid://kgxn5xu50y0b" path="res://Models/Engine-Included/Bloodiey/Bloodiey Neo Rigged1 cloth For Render.glb" id="1_fd2x2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qvlwq"]
+height = 1.85036
+
+[node name="Bloodiey" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.068808, 0, 6.91414e-06)
+
+[node name="Bloodiey Neo Rigged1 cloth For Render" parent="." instance=ExtResource("1_fd2x2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0675116, 0, -0.0144706)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.909284, 0)
+shape = SubResource("CapsuleShape3D_qvlwq")

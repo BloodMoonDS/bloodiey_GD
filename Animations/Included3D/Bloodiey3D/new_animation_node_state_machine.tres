@@ -1,0 +1,53 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=17 format=3 uid="uid://q6w5wh752nur"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tkarc"]
+animation = &"Bloodiey_Run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0vbyx"]
+animation = &"Bloodiey_Stand"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cl6sb"]
+animation = &"Bloodiey_Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u7u8m"]
+animation = &"Fall"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_08c6k"]
+animation = &"Jump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uy3fq"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ru5ti"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_itfyr"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gooyw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dyrir"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j4cey"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t6i6v"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8mdg0"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mkxcs"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r4dxm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f4oia"]
+
+[resource]
+states/Bloodiey_Run/node = SubResource("AnimationNodeAnimation_tkarc")
+states/Bloodiey_Run/position = Vector2(596, 43)
+states/Bloodiey_Stand/node = SubResource("AnimationNodeAnimation_0vbyx")
+states/Bloodiey_Stand/position = Vector2(225, 136)
+states/Bloodiey_Walk/node = SubResource("AnimationNodeAnimation_cl6sb")
+states/Bloodiey_Walk/position = Vector2(606, 136)
+states/Fall/node = SubResource("AnimationNodeAnimation_u7u8m")
+states/Fall/position = Vector2(383, -41)
+states/Jump/node = SubResource("AnimationNodeAnimation_08c6k")
+states/Jump/position = Vector2(181, -60)
+states/Start/position = Vector2(61, 129)
+transitions = ["Start", "Bloodiey_Stand", SubResource("AnimationNodeStateMachineTransition_uy3fq"), "Bloodiey_Stand", "Bloodiey_Walk", SubResource("AnimationNodeStateMachineTransition_ru5ti"), "Bloodiey_Walk", "Bloodiey_Stand", SubResource("AnimationNodeStateMachineTransition_itfyr"), "Bloodiey_Stand", "Bloodiey_Run", SubResource("AnimationNodeStateMachineTransition_gooyw"), "Bloodiey_Run", "Bloodiey_Stand", SubResource("AnimationNodeStateMachineTransition_dyrir"), "Bloodiey_Stand", "Fall", SubResource("AnimationNodeStateMachineTransition_j4cey"), "Fall", "Bloodiey_Stand", SubResource("AnimationNodeStateMachineTransition_t6i6v"), "Jump", "Bloodiey_Stand", SubResource("AnimationNodeStateMachineTransition_8mdg0"), "Bloodiey_Stand", "Jump", SubResource("AnimationNodeStateMachineTransition_mkxcs"), "Jump", "Fall", SubResource("AnimationNodeStateMachineTransition_r4dxm"), "Fall", "Jump", SubResource("AnimationNodeStateMachineTransition_f4oia")]
+graph_offset = Vector2(-236, -75)

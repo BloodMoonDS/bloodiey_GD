@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd18r0n6wkfy3"]
+
+[ext_resource type="Theme" uid="uid://bfj6q3d2p64sp" path="res://GUI/Bloodiey.tres" id="1_jhq4e"]
+
+[node name="MainGui" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_jhq4e")
+text = "Score: "

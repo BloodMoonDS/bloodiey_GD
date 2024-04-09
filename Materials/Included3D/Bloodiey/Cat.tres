@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqct4k1k2nyhv"]
+
+[ext_resource type="Texture2D" uid="uid://rdpw4stuvdke" path="res://Models/Engine-Included/Bloodiey/Bloodiey Neo Rigged1 cloth For Render_texture.png" id="1_bncl3"]
+
+[resource]
+resource_name = "Cat"
+cull_mode = 2
+albedo_texture = ExtResource("1_bncl3")
+roughness = 0.5
+texture_filter = 2

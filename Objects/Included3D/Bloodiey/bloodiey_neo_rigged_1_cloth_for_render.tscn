@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://2463uqrt6wui"]
+
+[ext_resource type="PackedScene" uid="uid://kgxn5xu50y0b" path="res://Models/Engine-Included/Bloodiey/Bloodiey Neo Rigged1 cloth For Render.glb" id="1_pvgaq"]
+
+[node name="Bloodiey Neo Rigged1 cloth For Render" instance=ExtResource("1_pvgaq")]

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cb3w4j438ah7d"]
+
+[ext_resource type="Texture2D" uid="uid://dmlw33i7pimut" path="res://Models/Engine-Included/Bloodiey/Bloodiey Neo Rigged1 cloth For Render_Sweater.png" id="1_uh6wf"]
+
+[resource]
+resource_name = "Sweater"
+cull_mode = 2
+albedo_texture = ExtResource("1_uh6wf")
+roughness = 0.5

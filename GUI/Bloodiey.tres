@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bfj6q3d2p64sp"]
+
+[ext_resource type="FontFile" uid="uid://bg0ew1q55nos5" path="res://Fonts/Engine_Included/pixel.otf" id="1_x2sgi"]
+
+[resource]
+default_font = ExtResource("1_x2sgi")
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_x2sgi")
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("1_x2sgi")

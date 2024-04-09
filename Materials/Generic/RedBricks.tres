@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cqaqxj84yx0qs"]
+
+[ext_resource type="Texture2D" path="res://Textures/Engine_Included/Generic/brick/diffuse.dds" id="1_0lg88"]
+[ext_resource type="Texture2D" path="res://Textures/Engine_Included/Generic/brick/normal.dds" id="2_88q6g"]
+
+[resource]
+albedo_color = Color(1, 0.4, 0.4, 1)
+albedo_texture = ExtResource("1_0lg88")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_88q6g")
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv7i2wn4cmqhy"]
+
+[ext_resource type="Script" path="res://Joystick.gd" id="1_vowju"]
+[ext_resource type="Texture2D" uid="uid://xixel724ir2a" path="res://Sprites/Engine-included/RedHandle.png" id="2_etsqc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bt0bo"]
+radius = 297.321
+
+[node name="Joystick" type="Area2D"]
+script = ExtResource("1_vowju")
+
+[node name="BigCircle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.243137)
+texture = ExtResource("2_etsqc")
+
+[node name="SmallCircle" type="Sprite2D" parent="BigCircle"]
+position = Vector2(-1, 1)
+scale = Vector2(0.375833, 0.375833)
+texture = ExtResource("2_etsqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bt0bo")

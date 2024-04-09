@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://cffdeux4j7lck"]
+
+[ext_resource type="PackedScene" uid="uid://c2egtjwj53irj" path="res://Objects/Included3D/Bloodiey/Bloodiey.tscn" id="1_ams5e"]
+[ext_resource type="PackedScene" uid="uid://bfpuxvg11ybig" path="res://joy_stick.tscn" id="2_nvg7o"]
+[ext_resource type="Texture2D" uid="uid://b3yrf5w3yx3if" path="res://Textures/Engine_Included/Generic/hdri/meadow_2_2k.hdr" id="2_o1mt4"]
+[ext_resource type="Material" uid="uid://duratdcilu6vs" path="res://Materials/Generic/Grass.tres" id="2_wexfm"]
+[ext_resource type="Material" uid="uid://cqaqxj84yx0qs" path="res://Materials/Generic/RedBricks.tres" id="4_x5dg7"]
+[ext_resource type="PackedScene" uid="uid://dd18r0n6wkfy3" path="res://GUI/main_gui.tscn" id="6_4q3yp"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_60r07"]
+panorama = ExtResource("2_o1mt4")
+
+[sub_resource type="Sky" id="Sky_v7mls"]
+sky_material = SubResource("PanoramaSkyMaterial_60r07")
+
+[sub_resource type="Environment" id="Environment_l7p2l"]
+background_mode = 2
+sky = SubResource("Sky_v7mls")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v53ab"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hu0fj"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_8bm67"]
+left_to_right = 0.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7634x"]
+points = PackedVector3Array(0.5, -0.5, -0.5, -0.476116, 0.507937, 0.507937, -0.476116, 0.507937, -0.507937, -0.5, -0.5, 0.5, 0.507937, -0.476116, 0.507937, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.507937, -0.476116, -0.507937, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bloodiey" parent="." instance=ExtResource("1_ams5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0137776, 0.475957, -0.0344231)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.528513, 0.848926, 0, -0.848926, 0.528513, 0.588522, 9.66158, -0.364766)
+light_color = Color(0.980392, 1, 0.819608, 1)
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 10.0
+shadow_transmittance_bias = 0.0
+shadow_blur = 0.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.979173, 0.203027, 0, -0.203027, 0.979173, 0.272763, 3.71751, 4.90726)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_l7p2l")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Baseplate" type="StaticBody3D" parent="Map"]
+transform = Transform3D(63.8211, 0, 0, 0, 1, 0, 0, 0, 48.571, 0, -0.491975, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Baseplate"]
+shape = SubResource("BoxShape3D_v53ab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Baseplate"]
+material_override = ExtResource("2_wexfm")
+mesh = SubResource("BoxMesh_hu0fj")
+
+[node name="Part" type="StaticBody3D" parent="Map"]
+transform = Transform3D(-6.38212, 0, 0, 0, 1.5, 0, 0, 0, -4.85711, 8, 0.703777, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Part"]
+shape = SubResource("BoxShape3D_v53ab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Part"]
+material_override = ExtResource("4_x5dg7")
+mesh = SubResource("BoxMesh_hu0fj")
+
+[node name="Part2" type="StaticBody3D" parent="Map"]
+transform = Transform3D(-6.38212, 0, 0, 0, 5.1, 0, 0, 0, -4.85711, -12, 2.56434, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Part2"]
+shape = SubResource("BoxShape3D_v53ab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Part2"]
+material_override = ExtResource("4_x5dg7")
+mesh = SubResource("BoxMesh_hu0fj")
+
+[node name="Part3" type="StaticBody3D" parent="Map"]
+transform = Transform3D(-62.6254, 0, 0, 0, 25.194, 0, 0, 0, -4.85711, 0, 12.5643, -5)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Part3"]
+shape = SubResource("BoxShape3D_v53ab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Part3"]
+material_override = ExtResource("4_x5dg7")
+mesh = SubResource("BoxMesh_hu0fj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map"]
+transform = Transform3D(6.10507, 0, 0, 0, 5.30683, 0, 0, 0, 4.68425, -5.81616, 2.5128, 0.0291412)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/StaticBody3D"]
+material_override = ExtResource("4_x5dg7")
+mesh = SubResource("PrismMesh_8bm67")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_7634x")
+
+[node name="JoyStick" parent="." instance=ExtResource("2_nvg7o")]
+visible = false
+position = Vector2(166, 515)
+
+[node name="MainGui" parent="." instance=ExtResource("6_4q3yp")]

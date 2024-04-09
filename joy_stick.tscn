@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfpuxvg11ybig"]
+
+[ext_resource type="Script" path="res://JoyStick.gd" id="1_ar6mu"]
+[ext_resource type="Texture2D" uid="uid://xixel724ir2a" path="res://Sprites/Engine-included/RedHandle.png" id="2_tsg8f"]
+[ext_resource type="Script" path="res://Knob.gd" id="3_7vyal"]
+
+[node name="JoyStick" type="Node2D"]
+script = ExtResource("1_ar6mu")
+
+[node name="Ring" type="Sprite2D" parent="."]
+scale = Vector2(0.206667, 0.206667)
+texture = ExtResource("2_tsg8f")
+
+[node name="Knob" type="Sprite2D" parent="."]
+scale = Vector2(0.0766667, 0.0766667)
+texture = ExtResource("2_tsg8f")
+script = ExtResource("3_7vyal")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -56.0
+offset_top = -52.0
+offset_right = 58.0
+offset_bottom = 62.0
+
+[connection signal="button_down" from="Button" to="Knob" method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="Knob" method="_on_button_button_up"]
